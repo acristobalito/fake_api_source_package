@@ -1,7 +1,7 @@
 # Fake Api Source Package
 Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https://fakestoreapi.com/) estas en el lugar correcto! 🎉
 
-# Tabla de contenidos
+# Table of Contents
 1. [Features](#features)
 2. [Getting started](#getting_started)
 3. [Usage](#usage)
