@@ -1,7 +1,7 @@
 name: fake_api_source_package
 description: "Fake api package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/acristobalito/fake_api_source_package
 
 environment:
   sdk: '>=3.3.2 <4.0.0'
