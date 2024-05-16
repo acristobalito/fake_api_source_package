@@ -17,15 +17,15 @@ class FakeApiSourcePackage {
 
   FakeApiSourcePackage._internal();
 
-  final ProductRepository productRepository = ProductRepositoryImpl();
+  final ProductRepository _productRepository = ProductRepositoryImpl();
 
   Future<Either<ResponseError, CategoriesModel>> getAllCategories() async =>
-      productRepository.getAllCategories();
+      _productRepository.getAllCategories();
 
   Future<Either<ResponseError, List<ProductModel>>> getProductFromCategory(
           String category) async =>
-      productRepository.getProductsFromCategory(category);
+      _productRepository.getProductsFromCategory(category);
 
   Future<Either<ResponseError, List<ProductModel>>> getAllProducts() async =>
-      productRepository.getAllProducts();
+      _productRepository.getAllProducts();
 }
