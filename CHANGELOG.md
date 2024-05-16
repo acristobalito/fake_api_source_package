@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+- Version inicial que consume 3 diferentes endpoint de la FakeApiStore.
