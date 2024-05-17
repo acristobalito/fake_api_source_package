@@ -5,7 +5,7 @@ Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https:/
 2. [Instalación](#Instalación)
 3. [Uso](#Uso)
 4. [Información adicional](#Información_adicional)
-5. [Librerias](#Librerias)
+5. [Librerías](#Librerías)
 6. [Equipo](#Equipo)
 7. [Conclusiones](#Conclusiones)
 
