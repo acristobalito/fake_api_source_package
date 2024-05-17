@@ -1,7 +1,11 @@
 import 'package:fake_api_source_package/infrastructure/repositories/repositories.dart';
 import 'package:http/http.dart' as http;
 
+/// Clase que implementa [ProductRepository] hereda el mixim [FakeApi].
 class ProductRepositoryImpl with FakeApi implements ProductRepository {
+  /// Retorna un [Future] de tipo [Either] que contiene como valor left [ResponseError]
+  /// y right [CategoriesModel]. Estos valores son asignados dependiendo de la respuesta
+  /// del servicio.
   @override
   Future<Either<ResponseError, CategoriesModel>> getAllCategories() async {
     final url = getAllCategoriesUrl();
@@ -14,6 +18,11 @@ class ProductRepositoryImpl with FakeApi implements ProductRepository {
     }
   }
 
+  /// Espera como parametro un tipo de dato [String] el cual representa a la categoria por
+  /// la que se desea consultar el servicio.
+  /// Retorna un [Future] de tipo [Either] que contiene como valor left [ResponseError]
+  /// y right un listado de [ProductModel]. Estos valores son asignados dependiendo de la respuesta
+  /// del servicio.
   @override
   Future<Either<ResponseError, List<ProductModel>>> getProductsFromCategory(
       String category) async {
@@ -27,6 +36,9 @@ class ProductRepositoryImpl with FakeApi implements ProductRepository {
     }
   }
 
+  /// Retorna un [Future] de tipo [Either] que contiene como valor left [ResponseError]
+  /// y right un listado de [ProductModel]. Estos valores son asignados dependiendo de la respuesta
+  /// del servicio.
   @override
   Future<Either<ResponseError, List<ProductModel>>> getAllProducts() async {
     final url = getAllProductsUrl();

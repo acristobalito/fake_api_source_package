@@ -1,9 +1,9 @@
 import 'package:example/domain/providers/main_screen_provider.dart';
-import 'package:example/presentation/screens/categories_view.dart';
-import 'package:example/presentation/screens/product_categories_view.dart';
-import 'package:example/presentation/screens/product_grid_view.dart';
-import 'package:example/presentation/widget/circular_progress_indicator_widget.dart';
-import 'package:example/presentation/widget/text_title_widget.dart';
+import 'package:example/presentation/widgets/categories_widget.dart';
+import 'package:example/presentation/widgets/containers/product_categories_widget.dart';
+import 'package:example/presentation/widgets/containers/product_grid_widget.dart';
+import 'package:example/presentation/widgets/circular_progress_indicator_widget.dart';
+import 'package:example/presentation/widgets/text_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

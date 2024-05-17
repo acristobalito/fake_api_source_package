@@ -4,11 +4,6 @@ import 'package:flutter/material.dart';
 
 class MainScreenProvider extends ChangeNotifier {
   final catalog = FakeApiSourcePackage();
-  /*  Categorias disponibles:
-      * electronics
-      * jewelery
-      * men's clothing
-      * women's clothing */
   final category = 'electronics';
   List<String>? categories;
   List<ProductModel>? categoryProducts;

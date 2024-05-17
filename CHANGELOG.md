@@ -1,3 +1,7 @@
 ## 0.0.1
 
 - Version inicial que consume 3 diferentes endpoint de la FakeApiStore.
+
+## 0.0.2
+
+- Documentación incluida en el paquete, ajuste del proyecto flutter example.

@@ -1,5 +1,5 @@
 import 'package:example/config/foundations/custom_typo.dart';
-import 'package:example/presentation/screens/landing_view.dart';
+import 'package:example/presentation/widgets/landing_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {

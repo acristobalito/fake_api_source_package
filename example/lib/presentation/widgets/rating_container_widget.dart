@@ -1,4 +1,4 @@
-import 'package:example/presentation/widget/text_title_widget.dart';
+import 'package:example/presentation/widgets/text_title_widget.dart';
 import 'package:flutter/material.dart';
 
 class RatingContainerWidget extends StatelessWidget {

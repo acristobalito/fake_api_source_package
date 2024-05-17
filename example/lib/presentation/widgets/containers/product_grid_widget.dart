@@ -1,4 +1,4 @@
-import 'package:example/presentation/widget/product_card_widget.dart';
+import 'package:example/presentation/widgets/cards/product_card_widget.dart';
 import 'package:fake_api_source_package/domain/model/product_model.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class ProductGridView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, childAspectRatio: 0.7),
+          crossAxisCount: 2, childAspectRatio: 0.62),
       itemCount: products.length,
       itemBuilder: (context, index) =>
           ProductCardWidget(product: products[index]),
