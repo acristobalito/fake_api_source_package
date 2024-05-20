@@ -1,7 +1,7 @@
 Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https://fakestoreapi.com/) estas en el lugar correcto! 🎉
 
 # Tabla de contenidos
-1. [Caracterízticas](#Caracterízticas)
+1. [Características](#Características)
 2. [Instalación](#Instalación)
 3. [Uso](#Uso)
 4. [Información adicional](#Información_adicional)
