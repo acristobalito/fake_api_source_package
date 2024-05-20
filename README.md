@@ -9,7 +9,7 @@ Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https:/
 6. [Equipo](#Equipo)
 7. [Conclusiones](#Conclusiones)
 
-## Caracterízticas
+## Características
 
 El presente paquete construido en Dart, consume 3 diferentes API's de la [FakeStoreAPI](https://fakestoreapi.com/).
 Proporciona una clase que contiene los 3 diferentes metodos: getAllCategories(), getProductFromCategory(), getAllProducts(). 
