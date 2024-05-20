@@ -1,4 +1,4 @@
-/// Modelo que implemnta [Exception] empleado para el control de errores provinientes de ejecutar los servicios de la FakeApiStore.
+/// Model that implements [Exception] used to control errors resulting from running the FakeApiStore services.
 class ResponseError implements Exception {
   final String message;
 

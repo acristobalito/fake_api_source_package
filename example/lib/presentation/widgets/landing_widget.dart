@@ -7,8 +7,8 @@ import 'package:example/presentation/widgets/text_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class LandingView extends StatelessWidget {
-  const LandingView({super.key});
+class LandingWidget extends StatelessWidget {
+  const LandingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class LandingView extends StatelessWidget {
             const TextTittleWidget(tittle: 'Todas las categorias:'),
             const SizedBox(height: 10),
             (mainScreenProvider.categories != null)
-                ? CategoriesView(categories: mainScreenProvider.categories!)
+                ? CategoriesWidget(categories: mainScreenProvider.categories!)
                 : const CircularProgressIndicatorWidget(),
             const SizedBox(height: 10),
             TextTittleWidget(
@@ -30,14 +30,14 @@ class LandingView extends StatelessWidget {
                     'Productos de la categoria ${mainScreenProvider.category}:'),
             const SizedBox(height: 10),
             (mainScreenProvider.categoryProducts != null)
-                ? ProductCategoriesView(
+                ? ProductCategoriesWidget(
                     products: mainScreenProvider.categoryProducts!)
                 : const CircularProgressIndicatorWidget(),
             const SizedBox(height: 10),
             const TextTittleWidget(tittle: 'Todos nuestros productos:'),
             const SizedBox(height: 10),
             (mainScreenProvider.products != null)
-                ? ProductGridView(products: mainScreenProvider.products!)
+                ? ProductGridWidget(products: mainScreenProvider.products!)
                 : const CircularProgressIndicatorWidget(),
           ],
         ),

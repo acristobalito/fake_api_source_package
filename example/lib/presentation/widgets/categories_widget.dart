@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CategoriesView extends StatelessWidget {
+class CategoriesWidget extends StatelessWidget {
   final List<String> categories;
-  const CategoriesView({super.key, required this.categories});
+  const CategoriesWidget({super.key, required this.categories});
 
   @override
   Widget build(BuildContext context) {

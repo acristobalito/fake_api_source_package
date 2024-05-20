@@ -1,4 +1,4 @@
-/// Modelo empleado para almacenar las categorias que retorna el servicio
+/// Model used to store the categories returned by the service
 class CategoriesModel {
   List<String> categories;
 

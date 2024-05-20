@@ -5,3 +5,7 @@
 ## 0.0.2
 
 - Documentación incluida en el paquete, ajuste del proyecto flutter example.
+
+## 0.0.3
+
+- Documentation translated into English, updated example project.

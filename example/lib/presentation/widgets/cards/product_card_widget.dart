@@ -1,7 +1,6 @@
 import 'package:example/presentation/widgets/rating_container_widget.dart';
 import 'package:example/presentation/widgets/text_title_widget.dart';
 import 'package:fake_api_source_package/domain/model/product_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProductCardWidget extends StatelessWidget {

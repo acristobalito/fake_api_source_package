@@ -1,4 +1,4 @@
-/// Modelo empleado por **ProductModel** para almacenar las calificaciones de un producto.
+/// Model used by **ProductModel** to store ratings for a product.
 class RatingModel {
   double rate;
   int count;

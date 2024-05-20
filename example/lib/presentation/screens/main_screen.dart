@@ -16,7 +16,7 @@ class MainScreen extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: const SafeArea(child: LandingView()),
+      body: const SafeArea(child: LandingWidget()),
     );
   }
 }

@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:fake_api_source_package/domain/model/categories_model.dart';
 
-/// Clase empleada para mapear la respuesta del servicio JSON al modelo **CategoriesModel**
+/// Class used to map the JSON service response to the **CategoriesModel** model.
 class CategoriesMapper {
-  /// Retorna un tipo de dato [CategoriesModel].
+  /// Returns a [CategoriesModel] data type.
   static CategoriesModel categoriesModelFromJson(String str) => CategoriesModel(
       categories: List<String>.from(json.decode(str).map((x) => x)));
 }

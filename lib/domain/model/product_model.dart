@@ -1,8 +1,8 @@
 import 'package:fake_api_source_package/domain/model/rating_model.dart';
 
-/// Modelo empleado para almacenar los atributos de un producto que retorna el servicio.
+/// Model used to store the attributes of a product returned by the service.
 ///
-/// Dentro de sus atributos se emplea el modelo **RatingModel** para almacenar las calificaciones del producto.
+/// Within its attributes, the **RatingModel** model is used to store the product ratings.
 class ProductModel {
   int id;
   String title;

@@ -1,15 +1,15 @@
-/// Clase que provee las url's de los servicios a consumir
+/// Class that provides the urls of the services to be consumed
 mixin class FakeApi {
   final _baseUrl = 'https://fakestoreapi.com';
 
-  /// Retorna la url del servicio que consulta todas las categorias existentes.
+  /// Returns the url of the service that consults all existing categories.
   String getAllCategoriesUrl() => '$_baseUrl/products/categories';
 
-  /// Retorna la url del servicio que consulta los productos de una determinada categoria.
-  /// Espera como parametro un tipo de dato [String] el cual representa una categoria especifica.
+  /// Returns the url of the service that consults the products of a certain category.
+  /// Expect a [String] data type as a parameter wich represents a category.
   String getProductsFromCategoryUrl(String category) =>
       '$_baseUrl/products/category/$category';
 
-  /// Retorna la ulr del servicio que consulta todos los productos existentes.
+  /// Returns the ulr of the service that queries all existing products.
   String getAllProductsUrl() => '$_baseUrl/products';
 }

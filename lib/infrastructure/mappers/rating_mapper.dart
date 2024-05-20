@@ -1,8 +1,8 @@
 import 'package:fake_api_source_package/domain/model/rating_model.dart';
 
-/// Clase empleada para mapear la respuesta del servicio JSON al modelo **RatingModel**
+/// Class used to map the JSON service response to the **RatingModel** model
 class RatingMapper {
-  /// Retorna un tipo de dato [RatingModel].
+  /// Returns a [RatingModel] data type.
   static RatingModel ratingFromJson(Map<String, dynamic> json) => RatingModel(
         rate: json["rate"]?.toDouble(),
         count: json["count"],
