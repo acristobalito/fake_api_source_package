@@ -23,7 +23,7 @@ dependencies:
   fake_api_source_package:
     git:
       url: https://github.com/acristobalito/fake_api_source_package
-      ref: main
+      ref: master
 ```
 
 ## Uso
