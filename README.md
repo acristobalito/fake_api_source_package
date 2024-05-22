@@ -21,9 +21,9 @@ Para usar el paquete, dentro del archivo pubspec.yaml agregar lo siguiente:
 dependencies:
   ...yaml
   fake_api_source_package:
-  git:
-    url: https://github.com/acristobalito/fake_api_source_package
-    ref: main
+    git:
+      url: https://github.com/acristobalito/fake_api_source_package
+      ref: main
 ```
 
 ## Uso
