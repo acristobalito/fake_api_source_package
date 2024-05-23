@@ -1,7 +1,7 @@
 Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https://fakestoreapi.com/) estas en el lugar correcto! 🎉
 
 # Tabla de contenidos
-1. [Caracterízticas](#Caracterízticas)
+1. [Características](#Características)
 2. [Instalación](#Instalación)
 3. [Uso](#Uso)
 4. [Información adicional](#Información_adicional)
@@ -21,9 +21,9 @@ Para usar el paquete, dentro del archivo pubspec.yaml agregar lo siguiente:
 dependencies:
   ...yaml
   fake_api_source_package:
-  git:
-    url: https://github.com/acristobalito/fake_api_source_package
-    ref: main
+    git:
+      url: https://github.com/acristobalito/fake_api_source_package
+      ref: master
 ```
 
 ## Uso
