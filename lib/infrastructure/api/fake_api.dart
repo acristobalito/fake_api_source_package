@@ -12,4 +12,10 @@ mixin class FakeApi {
 
   /// Returns the ulr of the service that queries all existing products.
   String getAllProductsUrl() => '$_baseUrl/products';
+
+  /// Returns the ulr of the user login service.
+  String getLoginUrl() => '$_baseUrl/auth/login';
+
+  /// Returns the ulr of the register user service.
+  String getRegisterUrl() => '$_baseUrl/users';
 }

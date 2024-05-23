@@ -1,5 +1,5 @@
-import 'package:fake_api_source_package/domain/model/product_model.dart';
 import 'package:fake_api_source_package/fake_api_source_package.dart';
+import 'package:fake_api_source_package/infrastructure/repositories/repositories.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenProvider extends ChangeNotifier {
@@ -13,6 +13,37 @@ class MainScreenProvider extends ChangeNotifier {
     _getCategories();
     _getProducts(category: category);
     _getProducts();
+  }
+
+  void loginUser() async {
+    final params = LoginParamsModel(username: 'mor_2314', password: '83r5^_');
+    final request = await catalog.loginUser(params);
+    final response = request.fold(
+      (l) => l.message,
+      (r) => r,
+    );
+    print(response);
+  }
+
+  void registerUser() async {
+    final params = UserModel(
+        email: 'a@gmail.com',
+        username: 'antobob',
+        password: '123',
+        name: NameModel(firstname: 'firstname', lastname: 'lastname'),
+        address: AddressModel(
+            city: 'Fake Store',
+            street: 'Unknow',
+            number: 123,
+            zipcode: '123-456',
+            geolocation: GeolocationModel(lat: '-12.123', long: '80.0000')),
+        phone: '999999');
+    final request = await catalog.registerUser(params);
+    final response = request.fold(
+      (l) => l.message,
+      (r) => r,
+    );
+    print(response);
   }
 
   void _getCategories() async {

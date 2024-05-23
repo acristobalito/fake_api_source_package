@@ -39,6 +39,16 @@ class LandingWidget extends StatelessWidget {
             (mainScreenProvider.products != null)
                 ? ProductGridWidget(products: mainScreenProvider.products!)
                 : const CircularProgressIndicatorWidget(),
+            FilledButton(
+                onPressed: () {
+                  mainScreenProvider.registerUser();
+                },
+                child: const Text('Registrar')),
+            FilledButton(
+                onPressed: () {
+                  mainScreenProvider.loginUser();
+                },
+                child: const Text('Login')),
           ],
         ),
       ),
