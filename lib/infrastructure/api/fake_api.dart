@@ -1,6 +1,6 @@
 /// Class that provides the urls of the services to be consumed
 mixin class FakeApi {
-  final _baseUrl = 'https://fakestoreapi.com';
+  static const _baseUrl = 'https://fakestoreapi.com';
 
   /// Returns the url of the service that consults all existing categories.
   String getAllCategoriesUrl() => '$_baseUrl/products/categories';

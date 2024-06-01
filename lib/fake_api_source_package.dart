@@ -1,17 +1,19 @@
 library fake_api_source_package;
 
-import 'package:fake_api_source_package/infrastructure/repositories/product/product_repository_impl.dart';
 import 'package:fake_api_source_package/infrastructure/repositories/repositories.dart';
-import 'package:fake_api_source_package/infrastructure/repositories/user/user_repository_impl.dart';
 
-/// Class that exposes access to 3 different methods:
+/// Class that exposes access to 5 different methods that recive as parameters **ProductRepositoryImpl** and **UserRepositoryImpl**:
 /// *  **getAllCategories()**, wich returns `Future<Either<ResponseError, CategoriesModel>>`
 /// *  __getProductFromCategory(String category)__, wich returns `Future<Either<ResponseError, List<ProductModel>>>`
 /// *  **getAllProducts()**, wich returns `Future<Either<ResponseError, List<ProductModel>>>`
+/// *  __registerUser(UserModel user)__, wich returns `Future<Either<ResponseError, List<ProductModel>>>`
+/// *  __loginUser(LoginParamsModel params)__, wich returns `Future<Either<ResponseError, List<ProductModel>>>`
 ///
 class FakeApiSourcePackage {
-  final ProductRepository _productRepository = ProductRepositoryImpl();
-  final UserRepository _userRepository = UserRepositoryImpl();
+  final ProductRepository _productRepository;
+  final UserRepository _userRepository;
+
+  FakeApiSourcePackage(this._productRepository, this._userRepository);
 
   /// Returns a [Future] value of type [Either] wich contains as left value [ResponseError]
   /// and right value [CategoriesModel]. These values ​​are assigned depending on the service response.

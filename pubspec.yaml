@@ -1,6 +1,6 @@
 name: fake_api_source_package
 description: "Fake api package project."
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/acristobalito/fake_api_source_package
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.1
+  mocktail: ^1.0.3
 
 dev_dependencies:
   flutter_test:

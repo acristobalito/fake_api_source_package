@@ -1,3 +1,7 @@
+## 0.0.5
+
+- Unit test implemented and dependenci inyection added.
+
 ## 0.0.4
 
 - User catalog added.

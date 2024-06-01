@@ -1,9 +1,12 @@
 import 'package:fake_api_source_package/fake_api_source_package.dart';
+import 'package:fake_api_source_package/infrastructure/repositories/product/product_repository_impl.dart';
 import 'package:fake_api_source_package/infrastructure/repositories/repositories.dart';
+import 'package:fake_api_source_package/infrastructure/repositories/user/user_repository_impl.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenProvider extends ChangeNotifier {
-  final catalog = FakeApiSourcePackage();
+  final catalog =
+      FakeApiSourcePackage(ProductRepositoryImpl(), UserRepositoryImpl());
   final category = 'electronics';
   List<String>? categories;
   List<ProductModel>? categoryProducts;
