@@ -11,8 +11,9 @@ Si estas buscando un paquete que consuma los servicios de [FakeStoreAPI](https:/
 
 ## Características
 
-El presente paquete construido en Dart, consume 3 diferentes API's de la [FakeStoreAPI](https://fakestoreapi.com/).
-Proporciona una clase que contiene los 3 diferentes metodos: getAllCategories(), getProductFromCategory(), getAllProducts(). 
+El presente paquete construido en Dart, consume 5 diferentes API's de la [FakeStoreAPI](https://fakestoreapi.com/).
+Proporciona una clase que contiene los siguientes metodos: getAllCategories(), getProductFromCategory(), getAllProducts(), registerUser(), loginUser().
+El paquete cuenta con una inyeccion de dependencias que espera la implementación de ambos repositorios y tests unitarios.
 
 ## Instalación
 
@@ -36,7 +37,9 @@ final catalog = FakeApiSourcePackage();
 A través de esta instancia, podremos tener acceso a los siguientes metodos:  
 * `catalog.getAllCategories();`, retorna un tipo de dato `Future<Either<ResponseError, CategoriesModel>>`
 * `catalog.getProductFromCategory(category);`, espera un parametro llamado `categoria` de tipo `String` y retorna un tipo de dato `Future<Either<ResponseError, List<ProductModel>>>`.
-* `catalog.responseAllProducts();`, el cual retorna un tipo de dato `Future<Either<ResponseError, List<ProductModel>>>`  
+* `catalog.responseAllProducts();`, el cual retorna un tipo de dato `Future<Either<ResponseError, List<ProductModel>>>`
+* `catalog.registerUser(user);`, espera un parametro llamado `user` de tipo `UserModel` y retorna un tipo de dato `Future<Either<ResponseError, int>>`.
+* `catalog.loginUser(params);`,espera un parametro llamado `params` de tipo `LoginParamsModel` y retorna un tipo de dato `Future<Either<ResponseError, String>>`  
   
 A continuación explicaremos el contenido de cada modelo de datos que retorna esta respuesta:  
   
@@ -76,7 +79,7 @@ class ProductModel {
   });
 }
 ```
-**RatingModel:** esta clase es empleada por la clase mencionada previamente, el cual cuenta con dos atirbutos de tipos numericos double e int.
+**RatingModel:** esta clase es empleada por la clase mencionada previamente, el cual cuenta con dos atributos de tipos numericos double e int.
 ```dart
 class RatingModel {
   double rate;
@@ -88,12 +91,40 @@ class RatingModel {
   });
 }
 ```
+**UserModel:** esta clase es empleada para almacenar los campos que se espera en el servicio para registrar un nuevo producto.
+```dart
+class UserModel {
+  final String email;
+  final String username;
+  final String password;
+  final NameModel name;
+  final AddressModel address;
+  final String phone;
+
+  UserModel(
+      {required this.email,
+      required this.username,
+      required this.password,
+      required this.name,
+      required this.address,
+      required this.phone});
+}
+```
+**LoginParamsModel:** esta clase es empleada para almacenar los parametros de loggeo que consume la API.
+```dart
+class LoginParamsModel {
+  final String username;
+  final String password;
+
+  LoginParamsModel({required this.username, required this.password});
+}
+```
 **¿Algun ejemplo?**  
 Para hacer uso de estos metodos, mostraremos un ejemplo el cual se encuentra en el archivo main_screen_provider.dart del paquete example:
 ```dart
 class MainScreenProvider extends ChangeNotifier {
   List<String>? categories;
-  final catalog = FakeApiSourcePackage();
+  final catalog = FakeApiSourcePackage(ProductRepositoryImpl(), UserRepositoryImpl());
   void _getCategories() async {
     final response = await catalog.getAllCategories();
     response.fold((error) {
