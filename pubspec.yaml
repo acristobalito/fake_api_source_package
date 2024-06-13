@@ -1,6 +1,6 @@
 name: fake_api_source_package
 description: "Fake api package project."
-version: 0.0.5
+version: 0.0.6
 homepage: https://github.com/acristobalito/fake_api_source_package
 
 environment:

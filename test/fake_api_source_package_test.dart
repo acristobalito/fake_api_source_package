@@ -50,167 +50,140 @@ void main() {
       test(
         'On call getAllCategories and get a success response, should return an instance of CategoriesModel',
         () async {
-          // Arrange
           when(() => mockProductRepository.getAllCategories()).thenAnswer(
             (_) async => Right(CategoriesModel(categories: ['Category'])),
           );
-          // Act
           final categoriesResponse = await catalog.getAllCategories();
           final response = categoriesResponse.fold(
               (onError) => null, (responseCategories) => responseCategories);
-          // Assert
-          expect(response, isA<CategoriesModel>());
+          expect(response, isA<CategoriesModel>(),
+              reason: 'Response should a valid CategorieModel');
         },
       );
 
       test(
         'On call getAllCategories and get a failure response, should return null',
         () async {
-          // Arrange
           when(() => mockProductRepository.getAllCategories()).thenAnswer(
             (_) async => Left(ResponseError('Error mockeado')),
           );
-          // Act
           final categoriesResponse = await catalog.getAllCategories();
           final response = categoriesResponse.fold(
               (onError) => null, (responseCategories) => responseCategories);
-          // Assert
-          expect(response, null);
+          expect(response, null, reason: 'Response should be null');
         },
       );
 
       test(
         'On call getProductFromCategory and get a success response, should return an instance of List<ProductModel>',
         () async {
-          // Arrange
           when(() => mockProductRepository.getProductsFromCategory(any()))
               .thenAnswer(
             (_) async => Right([productModelExpected]),
           );
-          // Act
           final productsFromCategoryResponse =
               await catalog.getProductFromCategory('');
           final response = productsFromCategoryResponse.fold((onError) => null,
               (responseProductsFromCategory) => responseProductsFromCategory);
-          // Assert
-          expect(response, isA<List<ProductModel>>());
+          expect(response, isA<List<ProductModel>>(),
+              reason: 'Response should be a valid list of products');
         },
       );
 
       test(
         'On call getProductFromCategory and get a failure response, should return null',
         () async {
-          // Arrange
           when(() => mockProductRepository.getProductsFromCategory(any()))
               .thenAnswer(
             (_) async => Left(ResponseError('Error mockeado')),
           );
-          // Act
           final productsFromCategoryResponse = await catalog.getAllCategories();
           final response = productsFromCategoryResponse.fold((onError) => null,
               (responseProductsFromCategory) => responseProductsFromCategory);
-          // Assert
-          expect(response, null);
+          expect(response, null, reason: 'Response should be null');
         },
       );
 
       test(
         'On call getAllProducts and get a success response, should return an instance of List<ProductModel>',
         () async {
-          // Arrange
           when(() => mockProductRepository.getAllProducts()).thenAnswer(
             (_) async => Right([productModelExpected]),
           );
-          // Act
           final productsFromCategoryResponse = await catalog.getAllProducts();
           final response = productsFromCategoryResponse.fold(
               (onError) => null, (responseAllProducts) => responseAllProducts);
-          // Assert
-          expect(response, isA<List<ProductModel>>());
+          expect(response, isA<List<ProductModel>>(),
+              reason: 'Response should be a list of products');
         },
       );
 
       test(
         'On call getAllProducts and get a failure response, should return null',
         () async {
-          // Arrange
           when(() => mockProductRepository.getAllProducts()).thenAnswer(
             (_) async => Left(ResponseError('Error mockeado')),
           );
-          // Act
           final productsFromCategoryResponse = await catalog.getAllCategories();
           final response = productsFromCategoryResponse.fold(
               (onError) => null, (responseAllProducts) => responseAllProducts);
-          // Assert
-          expect(response, null);
+          expect(response, null, reason: 'Response should be null');
         },
       );
 
       test(
         'On call registerUser and get a success response, should return an int value',
         () async {
-          // Arrange
           when(() => mockUserRepository.registerUser(any())).thenAnswer(
             (_) async => const Right(1),
           );
-          // Act
           final registerResponse =
               await catalog.registerUser(userModelExpected);
           final response =
               registerResponse.fold((onError) => null, (userId) => userId);
-          // Assert
-          expect(response, 1);
+          expect(response, 1, reason: 'Response should be 1');
         },
       );
 
       test(
         'On call registerUser and get a failure response, should return null',
         () async {
-          // Arrange
           when(() => mockUserRepository.registerUser(any())).thenAnswer(
             (_) async => Left(ResponseError('Error mockeado')),
           );
-          // Act
           final registerResponse =
               await catalog.registerUser(userModelExpected);
           final response =
               registerResponse.fold((onError) => null, (userId) => userId);
-          // Assert
-          expect(response, null);
+          expect(response, null, reason: 'Response should be null');
         },
       );
 
       test(
         'On call loginUser and get a success response, should return an int value',
         () async {
-          // Arrange
           when(() => mockUserRepository.loginUser(any())).thenAnswer(
             (_) async => const Right('token'),
           );
-          // Act
           final loginResponse =
               await catalog.loginUser(loginParamsModelExpected);
           final response =
               loginResponse.fold((onError) => null, (token) => token);
-          // Assert
-          expect(response, 'token');
+          expect(response, 'token', reason: 'Response should be token');
         },
       );
 
       test(
         'On call loginUser and get a failure response, should return null',
         () async {
-          // Arrange
           when(() => mockUserRepository.loginUser(any())).thenAnswer(
             (_) async => Left(ResponseError('Error mockeado')),
           );
-          // Act
           final loginResponse =
               await catalog.loginUser(loginParamsModelExpected);
           final response =
               loginResponse.fold((onError) => null, (token) => token);
-          // Assert
-          expect(response, null);
+          expect(response, null, reason: 'Response should be null');
         },
       );
     },

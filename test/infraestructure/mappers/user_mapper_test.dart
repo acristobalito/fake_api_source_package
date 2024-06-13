@@ -3,7 +3,6 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Get Json from AddressModel', () {
-    // Arrange
     final userModel = UserModel(
         email: '',
         username: '',
@@ -16,9 +15,7 @@ void main() {
             zipcode: '',
             geolocation: GeolocationModel(lat: '', long: '')),
         phone: '');
-    // Act
     final json = UserMapper.nameModelToJson(userModel);
-    // Assert
-    expect(json, isA<Map>());
+    expect(json, isA<Map>(), reason: 'json should be a valid Map');
   });
 }

@@ -9,40 +9,25 @@ void main() {
     });
 
     test('Get getAllCategoriesUrl should return valid string', () {
-      // Arrange
-      // Act
       final url = fakeApi.getAllCategoriesUrl();
-      // Assert
-      expect(url, isNotEmpty);
+      expect(url, isNotEmpty, reason: 'Url not bet empty');
     });
 
     test('Get getProductsFromCategoryUrl should return valid string', () {
-      // Arrange
-      // Act
       final url = fakeApi.getProductsFromCategoryUrl('');
-      // Assert
-      expect(url, isNotEmpty);
+      expect(url, isNotEmpty, reason: 'Url not be empty');
     });
     test('Get getAllProductsUrl should return valid string', () {
-      // Arrange
-      // Act
       final url = fakeApi.getAllProductsUrl();
-      // Assert
-      expect(url, isNotEmpty);
+      expect(url, isNotEmpty, reason: 'Url not be empty');
     });
     test('Get getLoginUrl should return valid string', () {
-      // Arrange
-      // Act
       final url = fakeApi.getLoginUrl();
-      // Assert
-      expect(url, isNotEmpty);
+      expect(url, isNotEmpty, reason: 'Url not be empty');
     });
     test('Get getRegisterUrl should return valid string', () {
-      // Arrange
-      // Act
       final url = fakeApi.getRegisterUrl();
-      // Assert
-      expect(url, isNotEmpty);
+      expect(url, isNotEmpty, reason: 'Url not be empty');
     });
   });
 }

@@ -21,11 +21,10 @@ class MainScreenProvider extends ChangeNotifier {
   void loginUser() async {
     final params = LoginParamsModel(username: 'mor_2314', password: '83r5^_');
     final request = await catalog.loginUser(params);
-    final response = request.fold(
+    request.fold(
       (l) => l.message,
       (r) => r,
     );
-    print(response);
   }
 
   void registerUser() async {
@@ -42,11 +41,10 @@ class MainScreenProvider extends ChangeNotifier {
             geolocation: GeolocationModel(lat: '-12.123', long: '80.0000')),
         phone: '999999');
     final request = await catalog.registerUser(params);
-    final response = request.fold(
+    request.fold(
       (l) => l.message,
       (r) => r,
     );
-    print(response);
   }
 
   void _getCategories() async {

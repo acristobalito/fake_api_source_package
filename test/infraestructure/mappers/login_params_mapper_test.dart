@@ -3,11 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('On loginParamsModelToJson return a valid String Json', () {
-    // Arrange
     final loginParams = LoginParamsModel(username: '', password: '');
-    // Act
     final json = LoginParamsMapper.loginParamsModelToJson(loginParams);
-    // Assert
-    expect(json, isNotEmpty);
+    expect(json, isNotEmpty, reason: 'Json not be empty');
   });
 }

@@ -1,3 +1,7 @@
+## 0.0.6
+
+- Reason added, comments and print removed.
+
 ## 0.0.5
 
 - Unit test implemented and dependenci inyection added.
